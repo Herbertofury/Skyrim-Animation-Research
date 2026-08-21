@@ -54,8 +54,7 @@ See **[docs/2026-08-21-RESCAN.md](docs/2026-08-21-RESCAN.md)** for sources and d
 | `docs/LEGACY.md` | Old workflows, why they fail, modern replacements |
 | `docs/SOURCES.md` | Source ledger with direct links |
 | `docs/2026-08-21-RESCAN.md` | Latest web rescan and newly added findings |
-| `data/*.csv` | Exact tabular exports from the verified Google Sheet |
-| `wiki/*.md` | Wiki-ready mirrors of the key documentation |
+| `wiki/*.md` | Repository-backed wiki-ready mirrors of the key documentation |
 
 ## Important compatibility notes
 
@@ -68,8 +67,8 @@ See **[docs/2026-08-21-RESCAN.md](docs/2026-08-21-RESCAN.md)** for sources and d
 
 ## Canonical live database
 
-The Google Sheet remains the fastest sortable/filterable surface and contains richer capability columns than Markdown can comfortably display:
+The Google Sheet remains the canonical sortable/filterable dataset and contains richer capability columns than Markdown can comfortably display:
 
 https://docs.google.com/spreadsheets/d/1MUrse5aUj5M0rMvXXrrnfWCtp66WWrjiwWxo1fFaHHY/edit
 
-The CSV files in this repository are generated from that verified workbook so the research remains portable and version-controlled.
+The repository documentation is curated from that verified workbook so the research remains readable and version-controlled without duplicating a stale second spreadsheet dataset.
