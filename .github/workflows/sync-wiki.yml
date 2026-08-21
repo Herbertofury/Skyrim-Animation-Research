@@ -1,0 +1,47 @@
+name: Sync GitHub Wiki
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'wiki/**'
+      - '.github/workflows/sync-wiki.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-github-wiki
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout research repository
+        uses: actions/checkout@v4
+
+      - name: Publish main/wiki to the live GitHub Wiki
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/skyrim-animation-wiki
+          git clone "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" /tmp/skyrim-animation-wiki
+
+          find /tmp/skyrim-animation-wiki -mindepth 1 -maxdepth 1 -type f -name '*.md' -delete
+          cp wiki/*.md /tmp/skyrim-animation-wiki/
+
+          cd /tmp/skyrim-animation-wiki
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "Wiki is already synchronized."
+            exit 0
+          fi
+
+          git commit -m "Sync wiki from main/wiki"
+          git push origin HEAD
