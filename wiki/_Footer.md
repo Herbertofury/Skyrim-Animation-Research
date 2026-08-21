@@ -1,0 +1,2 @@
+---
+**Skyrim Animation Research · 2026-08-21 snapshot** · [Repository](https://github.com/Herbertofury/Skyrim-Animation-Research) · [Sortable research database](https://docs.google.com/spreadsheets/d/1MUrse5aUj5M0rMvXXrrnfWCtp66WWrjiwWxo1fFaHHY/edit) · Verify exact tool/game/runtime versions before shipping.
