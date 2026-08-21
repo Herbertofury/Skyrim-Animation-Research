@@ -40,8 +40,34 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "Wiki is already synchronized."
-            exit 0
+          else
+            git commit -m "Sync wiki from main/wiki"
+            git push origin HEAD
           fi
 
-          git commit -m "Sync wiki from main/wiki"
-          git push origin HEAD
+          WIKI_HEAD="$(git rev-parse HEAD)"
+          SOURCE_SHA="${GITHUB_SHA}"
+          PAGE_COUNT="$(find "${GITHUB_WORKSPACE}/wiki" -maxdepth 1 -type f -name '*.md' | wc -l | tr -d ' ')"
+          SYNCED_AT="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+
+          cd "${GITHUB_WORKSPACE}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          cat > .github/wiki-sync-status.md <<EOF
+          # GitHub Wiki Sync Receipt
+
+          - Status: **SUCCESS**
+          - Source commit: \`${SOURCE_SHA}\`
+          - Live wiki commit: \`${WIKI_HEAD}\`
+          - Markdown pages synced: **${PAGE_COUNT}**
+          - Synced at UTC: \`${SYNCED_AT}\`
+
+          This file is written only after the workflow successfully clones and synchronizes the live GitHub Wiki repository.
+          EOF
+
+          git add .github/wiki-sync-status.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Record successful live wiki sync"
+            git push origin HEAD:main
+          fi
