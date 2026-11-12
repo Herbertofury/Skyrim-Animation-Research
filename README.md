@@ -72,3 +72,8 @@ The Google Sheet remains the canonical sortable/filterable dataset and contains 
 https://docs.google.com/spreadsheets/d/1MUrse5aUj5M0rMvXXrrnfWCtp66WWrjiwWxo1fFaHHY/edit
 
 The repository documentation is curated from that verified workbook so the research remains readable and version-controlled without duplicating a stale second spreadsheet dataset.
+
+
+## Competing apps and alternative workflows
+
+[Comparison hub](COMPETITORS.md): relevant baselines, source-backed alternatives, existing research catalogs and concrete validation priorities. Candidate ideas are not claims of measured superiority.
