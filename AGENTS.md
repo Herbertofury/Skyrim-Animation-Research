@@ -10,3 +10,7 @@ Keep this file and nested instructions project-owned: setup, commands, constrain
 - The linked Google Sheet is the canonical sortable dataset; Markdown is curated research. Keep provenance and avoid creating a competing stale dataset.
 - Keep MMD evaluation, retargeting, HKX conversion, behavior generation and runtime deployment independently documented. Optional tools are not universal prerequisites.
 - Verify changed local links and references; no executable test suite is present. The wiki workflow only runs on main changes to wiki files or its workflow. Do not claim a live wiki update from a repository-only edit.
+
+## Project skill
+
+Use `.agents/skills/animation-research-validation/SKILL.md` for source-led tool comparisons, conversion troubleshooting and evidence updates. Its validation stages are not claims that this documentation repository contains an executable conversion pipeline.
