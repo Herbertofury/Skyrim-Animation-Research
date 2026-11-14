@@ -2,6 +2,7 @@
 
 **Getting Started**
 - [[Home]]
+- [[Tooling and Integration Research|Skyrim-Tooling-and-Integration]]
 - [[Start Here|Start-Here]]
 - [[Installation & Setup|Installation-and-Setup]]
 - [[Recommended Stacks|Recommended-Stacks]]

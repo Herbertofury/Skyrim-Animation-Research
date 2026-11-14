@@ -1,5 +1,7 @@
 # Skyrim Animation Research — 2026
 
+**New dated addendum:** [Skyrim creation, management, repair and integration research (2026-11-14)](docs/2026-11-14-SKYRIM-TOOLING.md). Primary-source review only; historical catalog counts and native acceptance are unchanged.
+
 A current research hub for **MMD/VMD → Blender → Skyrim HKX** animation workflows, plus modern Skyrim animation authoring, annotations, root motion, paired animations, behaviors, runtime deployment, creature/cinematic tooling, troubleshooting, and legacy migration.
 
 **Research snapshot:** 2026-08-21  

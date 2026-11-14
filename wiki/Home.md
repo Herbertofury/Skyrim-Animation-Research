@@ -1,5 +1,7 @@
 # Skyrim Animation Research Wiki
 
+**Dated addendum:** [[Skyrim tooling, licenses and integration research (2026-11-14)|Skyrim-Tooling-and-Integration]]. Research evidence only, not installed-tool or native acceptance.
+
 > **2026 modern workflow hub for Skyrim animation authoring, VMD/MMD conversion, HKX, Blender rigs, annotations, root motion, OAR, Pandora, paired animations, combat, creatures, cinematics, and legacy rescue.**
 
 **Research snapshot:** August 21, 2026 · **75 tools/resources** · **69 verified source-ledger entries** · **20 troubleshooting cases**  
